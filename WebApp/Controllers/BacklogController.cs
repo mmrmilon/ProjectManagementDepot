@@ -10,11 +10,11 @@ namespace WebApp.Controllers
 {
     [Route("api/controller")]
     [ApiController]
-    public class BacklogApiController: ControllerBase
+    public class BacklogController: ControllerBase
     {
         private readonly ILogger<WeatherForecastController> logger;
         private readonly IBacklogRepository repository;
-        public BacklogApiController(ILogger<WeatherForecastController> logger, IBacklogRepository repository)
+        public BacklogController(ILogger<WeatherForecastController> logger, IBacklogRepository repository)
         {
             this.logger = logger;
             this.repository = repository;
