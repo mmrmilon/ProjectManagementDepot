@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{D698F366-DD2B-42F3-A2A4-B0873AA9CB36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{47AC39D1-DE73-4264-B282-0F50F16A1541}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{CDEAA938-2013-485E-999D-19E5655390F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D698F366-DD2B-42F3-A2A4-B0873AA9CB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D698F366-DD2B-42F3-A2A4-B0873AA9CB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D698F366-DD2B-42F3-A2A4-B0873AA9CB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D698F366-DD2B-42F3-A2A4-B0873AA9CB36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47AC39D1-DE73-4264-B282-0F50F16A1541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47AC39D1-DE73-4264-B282-0F50F16A1541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47AC39D1-DE73-4264-B282-0F50F16A1541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47AC39D1-DE73-4264-B282-0F50F16A1541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDEAA938-2013-485E-999D-19E5655390F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDEAA938-2013-485E-999D-19E5655390F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDEAA938-2013-485E-999D-19E5655390F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDEAA938-2013-485E-999D-19E5655390F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D946E1C-B2D1-4CA3-99FD-6A4706C0B7E3}
+	EndGlobalSection
+EndGlobal
