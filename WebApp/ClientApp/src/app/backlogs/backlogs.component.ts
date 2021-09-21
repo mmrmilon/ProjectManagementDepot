@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BacklogsService } from '../shared/backlogs.service';
 
 @Component({
   selector: 'app-backlogs',
@@ -8,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BacklogsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: BacklogsService) { }
 
   ngOnInit(): void {
+    this.service.loadBacklogList();
   }
 
 }

@@ -1,10 +1,11 @@
-<form>
+<form novalidate #form="ngForm" (submit)="onSubmit(form)">
   <input type="hidden" name="id" [value]="service.formData.id" />
   <div class="form-group">
     <label>Title</label>
     <input type="text" class="form-control from-control-lg"
            placeholder="Eneter backlog title" name="title" #title="ngModel"
-           [(ngModel)]="service.formData.title">
+           [(ngModel)]="service.formData.title"
+           required [class.invalid]="title.invalid && title.touched">
   </div>
   <div class="form-group">
     <label>Description</label>
@@ -13,14 +14,15 @@
               placeholder="Eneter backlog title"
               name="description"
               #description="ngModel"
-           [(ngModel)]="service.formData.description">
+           [(ngModel)]="service.formData.description"
+              required [class.invalid]="description.invalid && description.touched">
 </textarea>
   </div>
   <div class="form-group">
     <label>Priority</label>
-    <input type="text" class="form-control from-control-lg"
-           placeholder="Eneter backlog title" name="priority" #priority="ngModel"
-           [(ngModel)]="service.formData.priority">
+    <select name="priority" [(ngModel)]="service.formData.priority" class="form-select">
+      <option *ngFor="let key of priorityKeys" [ngValue]="key">{{priorities[key]}}</option>
+    </select>
   </div>
   <div class="form-group">
     <label>Is Active</label>   
@@ -30,5 +32,11 @@
              [(ngModel)]="service.formData.isActive">
       <label class="form-check-label" for="isActive"></label>
     </div>
-  </div>  
+  </div>
+  <div class="form-group">
+    <hr />
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">
+      Submit
+    </button>
+  </div>
 </form>

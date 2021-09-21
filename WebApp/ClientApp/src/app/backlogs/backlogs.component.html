@@ -1,1 +1,36 @@
-<app-backlogs-form></app-backlogs-form>
+<div class="jumbotron py-3">
+  <h1 class="display-4 text-left">
+    Backlog List
+  </h1>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <app-backlogs-form></app-backlogs-form>
+  </div>
+  <div class="col-md-6">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of service.list">
+          <td>{{row.title}}</td>
+          <td>{{row.description}}</td>
+          <td>{{row.priority}}</td>
+          <td>{{row.isActive}}</td>
+          <td>
+            <button type="button" class="btn btn-danger">
+              <i class="far fa-trash-alt fa-lg"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

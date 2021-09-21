@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace WebApp.Controllers
 {
-    [Route("api/controller")]
+    [Route("api/backlog")]
     [ApiController]
     public class BacklogController: ControllerBase
     {
@@ -45,7 +45,7 @@ namespace WebApp.Controllers
         public ActionResult <Backlogs> CreateBacklog(Backlogs model)
         {
             var result = repository.Insert(model);
-            return CreatedAtRoute(nameof(GetBacklogById), new {Id = result.Id}, result);
+            return CreatedAtRoute(nameof(GetBacklogById), new { result.Id }, result);
         }
 
         //PUT api/backlog
